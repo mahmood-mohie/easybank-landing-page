@@ -14,11 +14,11 @@ body {
     font-family: 'Public Sans', sans-serif;
     font-size: $font-med ;
     color:$grayishBlue ;
+    font-weight: 300;
 }
 
 a, a:visited , a:hover {
     text-decoration: none;
-    color: $grayishBlue;
 }
 
 // flexbox
@@ -33,5 +33,32 @@ a, a:visited , a:hover {
     }
     &-jc-c {
         justify-content: center;
+    }
+}
+
+// buttons 
+button , .button {
+    padding: 0.875rem 2.1875rem;
+    cursor: pointer;
+    color: $white;
+    border: 0;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, $limeGreen, $brightCyan);
+    font-weight: 400;
+}
+
+// visibility
+
+.hide-for-mobile {
+    // hide for mobile and tablets
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+
+}
+.hide-for-disktop {
+    // hide for disktop viewport widths
+    @include breakpoint-up(large) {
+        display: none;
     }
 }

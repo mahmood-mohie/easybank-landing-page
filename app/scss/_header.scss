@@ -4,12 +4,13 @@
         padding: 24px;
     }
 
-    // &__logo {
+    &__logo {
 
-    //     img {
-
-    //     }
-    // }
+        img {
+            width:8.8125rem;
+            height: 1.375rem ;
+        }
+    }
 
     &__menu { //mobile menu
         
@@ -29,7 +30,16 @@
 
         a {
             font-size: $font-sm;
-            
+            color: $grayishBlue;
+            &:not(:last-child) {
+                margin-right: 35px;
+            }
+
         }
+    }
+
+    &__cta {
+        font-size: $font-sm;
+        color: $white;
     }
 }

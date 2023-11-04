@@ -14,11 +14,11 @@ body {
   font-family: "Public Sans", sans-serif;
   font-size: 1.125rem;
   color: hsl(233deg, 8%, 62%);
+  font-weight: 300;
 }
 
 a, a:visited, a:hover {
   text-decoration: none;
-  color: hsl(233deg, 8%, 62%);
 }
 
 .flex {
@@ -34,8 +34,34 @@ a, a:visited, a:hover {
   justify-content: center;
 }
 
+button, .button {
+  padding: 0.875rem 2.1875rem;
+  cursor: pointer;
+  color: hsl(0deg, 0%, 100%);
+  border: 0;
+  border-radius: 50px;
+  background-image: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
+  font-weight: 400;
+}
+
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-disktop {
+    display: none;
+  }
+}
+
 .header nav {
   padding: 24px;
+}
+.header__logo img {
+  width: 8.8125rem;
+  height: 1.375rem;
 }
 .header__menu > span {
   display: block;
@@ -48,4 +74,12 @@ a, a:visited, a:hover {
 }
 .header__links a {
   font-size: 0.875rem;
+  color: hsl(233deg, 8%, 62%);
+}
+.header__links a:not(:last-child) {
+  margin-right: 35px;
+}
+.header__cta {
+  font-size: 0.875rem;
+  color: hsl(0deg, 0%, 100%);
 }/*# sourceMappingURL=style.css.map */
