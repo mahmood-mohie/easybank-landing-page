@@ -21,14 +21,14 @@
 </head>
 <body>
   <header class="header">
-    <div class="overlay"></div>
-    <nav class="flex flex-jc-sb flex-ai-c">
+    <div class="overlay has-fade"></div>
+    <nav class="container flex flex-jc-sb flex-ai-c">
 
       <a href="/" class="header__logo">
         <img src="/images/logo.svg" alt="easybank loge">
       </a>
 
-      <a href="#" id="hambugerMenu" class="header__menu hide-for-disktop">
+      <a href="#" id="hambugerMenu" class="header__toggle hide-for-disktop">
         <span></span>
         <span></span>
         <span></span>
@@ -44,10 +44,19 @@
 
       <a href="#" class="button header__cta hide-for-mobile">Request Invite</a>
     </nav>
+
+    <!-- mobile menu -->
+    <div class="header__menu has-fade">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Blog</a>
+      <a href="#">Careers</a>
+    </div>
   </header>
 
 
- <!-- 
+ 
 
   Request Invite
 
@@ -124,7 +133,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
-    -->
+   
 
    <script src="/app/js/script.js"></script>
 </body>

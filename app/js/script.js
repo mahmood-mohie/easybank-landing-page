@@ -1,16 +1,24 @@
 const header = document.querySelector(".header");
 const hambugerMenu = document.querySelector("#hambugerMenu");
-const overlay = document.querySelector(".overlay");
+const fadeElems = document.querySelectorAll(".has-fade");
+const body = document.querySelector("body")
 
 hambugerMenu.addEventListener("click", function() {
     console.log('clicked')
     if (header.classList.contains("open")) { 
         header.classList.remove("open")
-        overlay.classList.remove("fade-in")
-        overlay.classList.add("fade-out")
+        fadeElems.forEach((e)=> {
+            e.classList.remove("fade-in")
+            e.classList.add("fade-out")
+        })
+        body.classList.remove("noscroll")
     } else {
         header.classList.add("open")
-        overlay.classList.add("fade-in")
-        overlay.classList.remove("fade-out")
+        fadeElems.forEach((e)=> {
+            e.classList.add("fade-in")
+            e.classList.remove("fade-out")
+        })
+        body.classList.add("noscroll")
+
     }
 })
