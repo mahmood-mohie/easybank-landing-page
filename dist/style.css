@@ -110,6 +110,7 @@ a, a:visited, a:hover {
 }
 
 button, .button {
+  display: inline-block;
   padding: 0.875rem 2.1875rem;
   cursor: pointer;
   color: hsl(0deg, 0%, 100%);
@@ -120,8 +121,33 @@ button, .button {
 }
 
 .container {
+  max-width: 69.5625rem;
+  margin: 0 auto;
+}
+.container--pl {
+  padding-left: 1.5rem;
+}
+.container--pr {
+  padding-right: 1.5rem;
+}
+.container--px {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+.container--pt {
+  padding-top: 4rem;
+}
+.container--pb {
+  padding-bottom: 4rem;
+}
+.container--py {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+h1 {
+  font-weight: 400;
+  color: hsl(233deg, 26%, 24%);
 }
 
 @media (max-width: 63.9375em) {
@@ -146,6 +172,7 @@ button, .button {
   transform: rotate(-45deg);
 }
 .header .overlay {
+  z-index: 1;
   opacity: 0;
   position: fixed;
   left: 0;
@@ -155,6 +182,7 @@ button, .button {
   background-image: linear-gradient(hsl(233deg, 26%, 24%), transparent);
 }
 .header nav {
+  z-index: 2;
   position: relative;
   background-color: white;
   padding-top: 1.0625rem;
@@ -211,6 +239,7 @@ button, .button {
   opacity: 0.75;
 }
 .header__menu {
+  z-index: 2;
   background-color: white;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -226,4 +255,44 @@ button, .button {
   padding-bottom: 0.6875rem;
   color: hsl(233deg, 26%, 24%);
   text-align: center;
+}
+
+.hero__image {
+  position: relative;
+  height: 18.9375rem;
+  width: 100%;
+}
+.hero__image::before {
+  content: "";
+  position: absolute;
+  background-image: url(/images/bg-intro-mobile.svg);
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero__image::after {
+  content: "";
+  position: absolute;
+  background-image: url(/images/image-mockups.png);
+  width: 100%;
+  height: 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 92%;
+}
+.hero__text {
+  text-align: center;
+  padding-bottom: 1.0625rem;
+}
+.hero__text h1 {
+  font-size: 1.625rem;
+}
+.hero__text p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.hero__text a {
+  margin-top: 1.0625rem;
 }/*# sourceMappingURL=style.css.map */
