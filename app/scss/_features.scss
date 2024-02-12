@@ -1,0 +1,52 @@
+.feature {
+    background-color: $lightGrayishBlue;
+    &__content {
+        text-align: center;
+        @include breakpoint-up(medium) {
+            text-align: left;
+        }
+        text-align: center;
+        @include breakpoint-up(large) {
+            padding-top: 6.5rem;
+            padding-bottom: 6.5rem;
+        }
+    }
+    &__intro {
+        padding-bottom: 0.4375rem;
+        @include breakpoint-up(large) {
+            width: 60%;
+            padding-bottom:1.4375rem ;
+        }
+    }
+    &__items {
+        @include breakpoint-up(medium) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    &__item {
+        padding: 0.9375rem;
+        @include breakpoint-up(medium) {
+            flex: 0 0 50%;
+        }
+        @include breakpoint-up(large) {
+            flex: 1;
+        }
+    }
+
+    &__title {
+        margin-top: 1.4375rem; //23
+            margin-bottom: 1.4375rem; //23px
+            font-size: 1.125rem; //18px;
+        color: $darkBlue;
+        @include breakpoint-up(large) {
+            flex: 1;
+            margin-top: 42px;
+            margin-bottom: 30px;
+            font-size: 22px;
+        }
+    }
+    &__description {
+        line-height: 1.5;
+    }
+}
