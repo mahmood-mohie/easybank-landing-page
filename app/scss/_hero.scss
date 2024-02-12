@@ -2,43 +2,37 @@
 
    &__image {
     position: relative;
-    height: 18.9375rem;
-    width: 100%;
-
-    &::before {
-        content: "";
-        position: absolute;
-        background-image: url(/images/bg-intro-mobile.svg);
-        width: 100%;
-        height: 100%;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+    min-height: 17.5rem;
+    background-image: url(/images/bg-intro-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 
     &::after {
         content: "";
         position: absolute;
-        background-image: url(/images/image-mockups.png);
         width: 100%;
         height: 100%;
-        background-position: center bottom;
+        background-image: url(/images/image-mockups.png);
+        background-size: 93%;
         background-repeat: no-repeat;
-        background-size: 92%;
+        background-position: center bottom;
     }
    }
    &__text {
     text-align: center;
-    padding-bottom:1.0625rem ;
+    
     h1 {
-        font-size: $font-lg;
+        font-size: 2.25rem ;// 36px
+        line-height: 1.51;
+        margin-bottom: 1.5rem;
+        font-weight: 300;
+        color: $darkBlue;
     }
     p {
-        font-size: $font-sm;
+        margin-bottom: 2.25rem ;
         line-height: 1.5;
-    }
-    a {
-        margin-top: 1.0625rem;
+
     }
    }
 }

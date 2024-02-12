@@ -84,7 +84,7 @@ body {
   padding: 0;
   line-height: 1.3;
   font-family: "Public Sans", sans-serif;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   color: hsl(233deg, 8%, 62%);
   font-weight: 300;
 }
@@ -135,19 +135,24 @@ button, .button {
   padding-right: 1.5rem;
 }
 .container--pt {
-  padding-top: 4rem;
+  padding-top: 2.25rem;
 }
 .container--pb {
-  padding-bottom: 4rem;
+  padding-bottom: 2.25rem;
 }
 .container--py {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+.container--pall {
+  padding-top: 2.25rem;
+  padding-right: 1.5rem;
+  padding-bottom: 2.25rem;
+  padding-left: 1.5rem;
 }
 
-h1 {
-  font-weight: 400;
-  color: hsl(233deg, 26%, 24%);
+h1, h2, h3 {
+  margin-top: 0;
 }
 
 @media (max-width: 63.9375em) {
@@ -259,40 +264,33 @@ h1 {
 
 .hero__image {
   position: relative;
-  height: 18.9375rem;
-  width: 100%;
-}
-.hero__image::before {
-  content: "";
-  position: absolute;
+  min-height: 17.5rem;
   background-image: url(/images/bg-intro-mobile.svg);
-  width: 100%;
-  height: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .hero__image::after {
   content: "";
   position: absolute;
-  background-image: url(/images/image-mockups.png);
   width: 100%;
   height: 100%;
-  background-position: center bottom;
+  background-image: url(/images/image-mockups.png);
+  background-size: 93%;
   background-repeat: no-repeat;
-  background-size: 92%;
+  background-position: center bottom;
 }
 .hero__text {
   text-align: center;
-  padding-bottom: 1.0625rem;
 }
 .hero__text h1 {
-  font-size: 1.625rem;
+  font-size: 2.25rem;
+  line-height: 1.51;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  color: hsl(233deg, 26%, 24%);
 }
 .hero__text p {
-  font-size: 0.875rem;
+  margin-bottom: 2.25rem;
   line-height: 1.5;
-}
-.hero__text a {
-  margin-top: 1.0625rem;
 }/*# sourceMappingURL=style.css.map */
