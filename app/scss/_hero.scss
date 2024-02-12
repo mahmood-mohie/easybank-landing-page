@@ -1,5 +1,11 @@
 .hero {
-
+    .container {
+        @include breakpoint-up(large) {
+            display: flex;
+            align-items: center;
+            
+        }
+    }
    &__image {
     position: relative;
     min-height: 17.5rem;
@@ -7,7 +13,33 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    @include breakpoint-up(large) {
+        height: 41rem;
+        flex: 3;
+        order: 2;
+        background-image: none;
+        // background-image: url(/images/bg-intro-desktop.svg);
+        // background-position: left center;
 
+    }
+    @include breakpoint-up(medium) {
+        min-height: 25rem;
+        background-position: center 60%;
+    }
+    &::before {
+        @include breakpoint-up(large) {
+            content: "";
+            position: absolute;
+            height: 100%;
+            background-image: url(/images/bg-intro-desktop.svg);
+            // background-size: 93%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            width: 150%;
+            background-size: 122%;  
+            background-position: 0% 83%;
+        }
+    }
     &::after {
         content: "";
         position: absolute;
@@ -17,10 +49,29 @@
         background-size: 93%;
         background-repeat: no-repeat;
         background-position: center bottom;
+
+        @include breakpoint-up(medium) {
+        
+            background-size: 52%;
+        }
+        @include breakpoint-up(large) {
+            width: 120%;
+            height: 122%;
+            background-size: 94%;
+            background-position: center 150%;
+            left: 22%;
+        }
+        
     }
+    
    }
    &__text {
     text-align: center;
+    @include breakpoint-up(large) {
+        flex: 2;
+        order: 1;
+        text-align: left;
+    }
     
     h1 {
         font-size: 2.25rem ;// 36px
@@ -28,6 +79,9 @@
         margin-bottom: 1.5rem;
         font-weight: 300;
         color: $darkBlue;
+        @include breakpoint-up(large) {
+            font-size: 3.125rem; // 50px
+        }
     }
     p {
         margin-bottom: 2.25rem ;

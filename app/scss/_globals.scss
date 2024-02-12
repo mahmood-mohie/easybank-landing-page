@@ -18,6 +18,9 @@ body {
     font-size:0.875rem ; // 14px
     color:$grayishBlue ;
     font-weight: 300;
+    @include breakpoint-up(large) {
+        font-size: 1.0625rem;
+    }
 }
 
 a, a:visited , a:hover {
@@ -45,10 +48,16 @@ button , .button {
     padding: 0.875rem 2.1875rem;
     cursor: pointer;
     color: $white;
+    font-size: $font-sm;
     border: 0;
     border-radius: 50px;
     background-image: linear-gradient(to right, $limeGreen, $brightCyan);
     font-weight: 400;
+    transition: opacity 200ms ease-in-out;
+
+    &:hover {
+        opacity: 0.75;
+    }
 }
 // spacing 
 .container {
