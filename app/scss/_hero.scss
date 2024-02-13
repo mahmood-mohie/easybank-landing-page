@@ -1,6 +1,7 @@
 .hero {
     background-color: $veryLightGray;
     .container {
+      
         @include breakpoint-up(large) {
             display: flex;
             align-items: center;
