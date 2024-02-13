@@ -41,22 +41,22 @@
         }
     }
     &__author {
-        font-size: 9px;
-        @include breakpoint-up(large) {
-            padding-bottom: 15px;
-        }
+        font-size: 0.75rem;
+        padding-bottom: 0.9375rem;
+        color: $grayishBlue;
+    
     }
     &__title {
         font-weight: 400;
         line-height: 1.3;
         color: $darkBlue;
-        font-size: 15px;
-        @include breakpoint-up(large) {
-            padding-bottom: 13px;
-        }
+        font-size: 0.9375rem;
+        padding-bottom:0.8125rem;
     }
     &__description {
-        font-size: 12px;
+        color: $grayishBlue;
+        font-weight: 400;
+        font-size: 0.75rem;
         line-height: 1.5;
     }
 }

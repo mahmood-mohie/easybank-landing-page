@@ -1,0 +1,119 @@
+.footer {
+    background-color:$darkBlue ;
+    color: white;
+    a {
+        color: white;
+    }
+    &__content {
+        padding-top: 2.5rem ;
+        padding-bottom: 2.5rem ;
+        text-align: center;
+
+        @include breakpoint-up(medium) { 
+            display: grid;
+            text-align: left;
+            column-gap: 0.625rem;
+            grid-template-columns: 2fr 1fr ;
+            grid-template-areas: 
+            "logo link1"
+            "social link1"
+            "cta link2"
+            "copyright link2";
+            justify-items: flex-start;
+    align-items: center;
+        }
+        @include breakpoint-up(large) {
+            padding-top: 3rem ;
+            padding-bottom: 3rem ;
+            grid-template-columns: 2fr 1fr 1fr 3fr;
+            grid-template-rows: 1fr auto;
+            grid-template-areas: 
+            "logo link1 link2 cta"
+            "social link1 link2 copyright";
+            justify-items: flex-start;
+            align-items: flex-start;
+        }
+        }
+      
+    
+    &__logo {
+        margin-bottom: 1.875rem;
+        grid-area: logo;
+        @include breakpoint-up(medium) { 
+            margin-bottom: 0rem;
+        }
+    }
+    &__social {
+        grid-area: social;
+        margin-bottom: 1.875rem;
+        a {
+            height: 20px;
+            transition: fill 150ms ease-in-out;
+            &:not(:last-child) {
+                margin-right: 1rem;
+                @include breakpoint-up(large) { 
+                    margin-right: 0.75rem;
+                }
+            }
+            &:hover svg path {
+                fill:$limeGreen;
+            }
+        }
+        @include breakpoint-up(medium) { 
+            margin-bottom: 0rem;
+            height: 20px;
+        }
+    }
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 2.5;
+        font-size: 0.75rem;
+        @include breakpoint-up(medium){
+            font-size: 1rem;
+            align-items: flex-start;
+            line-height: 2;
+        }
+      
+        &.cal1 {
+            grid-area: link1;
+        }
+        &.cal2 {
+            grid-area: link2;
+            margin-bottom: 1.875rem;
+            @include breakpoint-up(medium) { 
+                margin-bottom: 0rem;
+            }
+        }
+        a {
+            transition: all 150ms ease-in-out;
+            &:hover {
+                color: $limeGreen;
+            }
+        }
+
+    }
+    &__cta {
+        grid-area: cta;
+        margin-bottom: 1.875rem;
+        @include breakpoint-up(medium) { 
+            margin-bottom: 0rem;
+        }
+        @include breakpoint-up(large) {
+            justify-self: flex-end;
+        }
+
+    }
+    &__copyright {
+        grid-area: copyright;
+        font-size: 0.75rem;
+        color: $grayishBlue;
+        @include breakpoint-up(medium){
+            font-size: 1rem;
+        }
+        @include breakpoint-up(large) {
+            justify-self: flex-end;
+        }
+    }
+}
